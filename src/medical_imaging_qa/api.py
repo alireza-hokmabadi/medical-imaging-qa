@@ -6,7 +6,7 @@ from pathlib import Path
 from .geometry import compare_geometry, validate_affine
 from .intensity import intensity_statistics, validate_intensity
 from .io import load_nifti, to_summary
-from .models import BatchReport, CaseReport, Finding, Severity, status_from_findings
+from .models import BatchReport, CaseReport, Finding, LabelStat, Severity, status_from_findings
 from .provenance import file_provenance
 from .reporting import write_batch_report
 from .rules import QARules
@@ -58,7 +58,7 @@ def inspect_nifti(
     active_rules = rules or QARules()
     record = load_nifti(path)
     findings = _header_findings(record, role, active_rules)
-    labels = []
+    labels: list[LabelStat] = []
 
     if role == "mask":
         findings.extend(validate_labelmap(record.data, active_rules, expected_labels))
@@ -114,7 +114,7 @@ def validate_pair(
         )
     )
 
-    labels = []
+    labels: list[LabelStat] = []
     has_blocking_mask_error = any(
         item.severity == Severity.ERROR and item.code.startswith("mask.") for item in findings
     )
