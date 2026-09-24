@@ -1,7 +1,5 @@
+import nibabel as nib
 import numpy as np
-import pytest
-
-nib = pytest.importorskip("nibabel")
 
 from medical_imaging_qa.api import validate_pair
 from medical_imaging_qa.synthetic import create_demo_dataset

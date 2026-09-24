@@ -18,7 +18,7 @@ class QARules:
     max_nonfinite_fraction: float = 0.0
 
     @classmethod
-    def from_json(cls, path: str | Path) -> "QARules":
+    def from_json(cls, path: str | Path) -> QARules:
         payload = json.loads(Path(path).read_text(encoding="utf-8"))
         if not isinstance(payload, dict):
             raise ValueError("QA rules JSON must contain an object at the top level.")
