@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software in research, please cite the repository and the version used."
+title: "Medical Imaging QA"
+type: software
+authors:
+  - family-names: "Hokmabadi"
+    given-names: "Alireza"
+version: 0.1.0
+date-released: 2026-09-24
+license: MIT
+repository-code: "https://github.com/alireza-hokmabadi/medical-imaging-qa"

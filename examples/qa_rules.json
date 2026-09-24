@@ -1,0 +1,10 @@
+{
+  "affine_atol": 0.0001,
+  "spacing_atol": 0.00001,
+  "integer_tolerance": 0.000001,
+  "min_component_voxels": 10,
+  "warn_multiple_components": true,
+  "warn_boundary_touch": true,
+  "warn_missing_qform_sform": true,
+  "max_nonfinite_fraction": 0.0
+}

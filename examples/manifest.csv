@@ -1,0 +1,3 @@
+case_id,image_path,mask_path,expected_labels
+case_001,data/case_001_image.nii.gz,data/case_001_mask.nii.gz,1;2
+case_002,data/case_002_image.nii.gz,data/case_002_mask.nii.gz,1;2
